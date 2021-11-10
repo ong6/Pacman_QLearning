@@ -276,7 +276,7 @@ class NewExtractor2(FeatureExtractor):
                 #     features["#-of-scared-ghosts-3-step-away"] += 1.0
                 
                 if g.scaredTimer >= 2 and (next_x, next_y) in Actions.getLegalNeighbors(g.getPosition(), walls):
-                    features["#-of-scared-ghosts-1-step-away"] += 2.0
+                    features["#-of-scared-ghosts-1-step-away"] += 1.0
                     dist = self.closestGhost((next_x, next_y), g.getPosition(), walls)
                     if dist is not None:
                         # make the distance a number less than one otherwise the update
@@ -287,7 +287,7 @@ class NewExtractor2(FeatureExtractor):
         if (not features["#-of-ghosts-1-step-away"] and not features["#-of-ghosts-2-step-away"] or all_ghosts_scared) and food[next_x][next_y]:
             features["eats-food"] = 1.5
             
-        features.divideAll(9.0)
+        features.divideAll(8.0)
         return features
 
     
