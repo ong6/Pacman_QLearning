@@ -267,25 +267,33 @@ class NewExtractor2(FeatureExtractor):
         ghost_states = state.getGhostStates()
         all_ghosts_scared = all(ghost_state.scaredTimer >= 2 for ghost_state in ghost_states)
         some_ghosts_scared = any(ghost_state.scaredTimer >= 2 for ghost_state in ghost_states)
+        
             
         # if scared, check if pacman is in a ghost's scared range
         if some_ghosts_scared:
-            for g in state.getGhostStates():
-                
-                # if g.scaredTimer >= 2 and util.manhattanDistance((next_x, next_y), g.getPosition()) <= 3:
-                #     features["#-of-scared-ghosts-3-step-away"] += 1.0
+            for g in ghost_states:
+                if g.scaredTimer >= 2 and util.manhattanDistance((next_x, next_y), g.getPosition()) <= 5:
+                    features["close-ghost"] += 2.0
                 
                 if g.scaredTimer >= 2 and (next_x, next_y) in Actions.getLegalNeighbors(g.getPosition(), walls):
-                    features["#-of-scared-ghosts-1-step-away"] += 2.0
+                    features["#-of-scared-ghosts-1-step-away"] += 1.0
                     dist = self.closestGhost((next_x, next_y), g.getPosition(), walls)
                     if dist is not None:
                         # make the distance a number less than one otherwise the update
                         # will diverge wildly
-                        features["closest-ghost"] = float(dist) / (walls.width * walls.height)
+                        features["closest-safe-ghost"] = float(dist) / (walls.width * walls.height)
+        else: 
+            for g in ghost_states:
+                dist = self.closestGhost((next_x, next_y), g.getPosition(), walls)
+                if dist is not None:
+                    # make the distance a number less than one otherwise the update
+                    # will diverge wildly
+                    features["closest-danger-ghost"] = float(dist) / (walls.width * walls.height)
+            
             
         # if there is no danger of ghosts then add the food feature
         if (not features["#-of-ghosts-1-step-away"] and not features["#-of-ghosts-2-step-away"] or all_ghosts_scared) and food[next_x][next_y]:
-            features["eats-food"] = 1.5
+            features["eats-food"] = 2.0
             
         features.divideAll(9.0)
         return features
