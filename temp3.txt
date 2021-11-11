@@ -1,112 +1,112 @@
 Beginning 50 episodes of Training
 Training Done (turning off epsilon and alpha)
 ---------------------------------------------
-Pacman emerges victorious! Score: 1538
-Pacman emerges victorious! Score: 1532
-Pacman emerges victorious! Score: 1539
-Pacman emerges victorious! Score: 1934
-Pacman died! Score: 293
-Pacman died! Score: 455
-Pacman emerges victorious! Score: 1713
-Pacman emerges victorious! Score: 1740
-Pacman died! Score: 762
-Pacman died! Score: 525
-Pacman died! Score: 292
-Pacman emerges victorious! Score: 1518
-Pacman emerges victorious! Score: 1736
-Pacman died! Score: 459
-Pacman emerges victorious! Score: 1942
-Pacman died! Score: -285
-Pacman emerges victorious! Score: 1544
-Pacman emerges victorious! Score: 1521
+Pacman emerges victorious! Score: 1927
+Pacman emerges victorious! Score: 1524
 Pacman emerges victorious! Score: 1726
-Pacman died! Score: -30
-Pacman emerges victorious! Score: 1536
-Pacman emerges victorious! Score: 1912
+Pacman emerges victorious! Score: 1925
 Pacman emerges victorious! Score: 1533
-Pacman emerges victorious! Score: 1481
-Pacman emerges victorious! Score: 1342
-Pacman emerges victorious! Score: 1914
-Pacman emerges victorious! Score: 1525
-Pacman emerges victorious! Score: 1743
-Pacman emerges victorious! Score: 2134
-Pacman died! Score: 159
-Pacman emerges victorious! Score: 1716
-Pacman emerges victorious! Score: 1926
-Pacman emerges victorious! Score: 1732
-Pacman died! Score: 104
-Pacman emerges victorious! Score: 2112
+Pacman emerges victorious! Score: 1733
+Pacman emerges victorious! Score: 1714
+Pacman emerges victorious! Score: 1718
 Pacman died! Score: 128
-Pacman emerges victorious! Score: 1337
-Pacman emerges victorious! Score: 1529
-Pacman died! Score: -220
-Pacman died! Score: 1020
-Pacman died! Score: -120
-Pacman emerges victorious! Score: 1512
-Pacman emerges victorious! Score: 1735
-Pacman emerges victorious! Score: 1347
-Pacman emerges victorious! Score: 1528
-Pacman emerges victorious! Score: 1746
-Pacman emerges victorious! Score: 1937
-Pacman died! Score: 637
-Pacman died! Score: 813
+Pacman died! Score: 956
 Pacman emerges victorious! Score: 1534
+Pacman emerges victorious! Score: 1326
+Pacman emerges victorious! Score: 1336
+Pacman emerges victorious! Score: 1920
+Pacman emerges victorious! Score: 1707
+Pacman emerges victorious! Score: 1724
+Pacman emerges victorious! Score: 1914
+Pacman emerges victorious! Score: 1917
+Pacman emerges victorious! Score: 1462
+Pacman emerges victorious! Score: 1534
+Pacman emerges victorious! Score: 1924
+Pacman emerges victorious! Score: 1522
+Pacman emerges victorious! Score: 1319
+Pacman died! Score: 807
+Pacman died! Score: 232
+Pacman emerges victorious! Score: 1705
+Pacman emerges victorious! Score: 1747
+Pacman emerges victorious! Score: 1521
+Pacman died! Score: 862
+Pacman emerges victorious! Score: 1501
+Pacman emerges victorious! Score: 2113
+Pacman emerges victorious! Score: 1740
+Pacman emerges victorious! Score: 1534
+Pacman emerges victorious! Score: 1905
+Pacman died! Score: 835
+Pacman died! Score: -66
+Pacman died! Score: 39
+Pacman emerges victorious! Score: 1925
+Pacman emerges victorious! Score: 1908
+Pacman emerges victorious! Score: 1736
+Pacman emerges victorious! Score: 1936
+Pacman emerges victorious! Score: 1732
+Pacman emerges victorious! Score: 1922
+Pacman emerges victorious! Score: 1731
+Pacman emerges victorious! Score: 1736
+Pacman emerges victorious! Score: 1734
+Pacman emerges victorious! Score: 1724
+Pacman emerges victorious! Score: 2104
+Pacman emerges victorious! Score: 1718
+Pacman emerges victorious! Score: 1722
 Reinforcement Learning Status:
 	Completed 50 test episodes
-	Average Rewards over testing: 1235.72
-	Average Rewards for last 100 episodes: 1026.72
-	Episode took 41.26 seconds
-Pacman emerges victorious! Score: 1684
-Pacman emerges victorious! Score: 1537
-Pacman emerges victorious! Score: 1936
-Pacman died! Score: -340
-Pacman died! Score: 485
-Pacman died! Score: 519
-Pacman emerges victorious! Score: 1536
-Pacman died! Score: 516
-Pacman emerges victorious! Score: 1530
-Pacman emerges victorious! Score: 1729
-Pacman emerges victorious! Score: 1535
-Pacman emerges victorious! Score: 1336
-Pacman emerges victorious! Score: 1542
-Pacman emerges victorious! Score: 1735
-Pacman emerges victorious! Score: 1302
-Pacman emerges victorious! Score: 1905
-Pacman died! Score: 506
-Pacman emerges victorious! Score: 1721
-Pacman emerges victorious! Score: 1726
-Pacman emerges victorious! Score: 1741
-Pacman emerges victorious! Score: 1535
-Pacman emerges victorious! Score: 1546
-Pacman emerges victorious! Score: 1545
-Pacman died! Score: -99
+	Average Rewards over testing: 1522.52
+	Average Rewards for last 100 episodes: 1195.01
+	Episode took 90.87 seconds
 Pacman emerges victorious! Score: 1525
-Pacman emerges victorious! Score: 2141
-Pacman emerges victorious! Score: 1740
-Pacman emerges victorious! Score: 1533
-Pacman died! Score: -360
-Pacman died! Score: 12
+Pacman emerges victorious! Score: 1537
+Pacman died! Score: 834
 Pacman emerges victorious! Score: 1736
-Pacman died! Score: -217
-Pacman emerges victorious! Score: 1718
-Pacman died! Score: 102
-Pacman died! Score: 602
+Pacman died! Score: 547
+Pacman died! Score: 553
+Pacman emerges victorious! Score: 1527
+Pacman emerges victorious! Score: 1744
+Pacman emerges victorious! Score: 1916
+Pacman died! Score: -62
+Pacman emerges victorious! Score: 1736
+Pacman emerges victorious! Score: 1721
+Pacman emerges victorious! Score: 1907
+Pacman died! Score: 436
+Pacman emerges victorious! Score: 2114
+Pacman emerges victorious! Score: 1734
+Pacman emerges victorious! Score: 1932
+Pacman emerges victorious! Score: 2101
+Pacman emerges victorious! Score: 1509
+Pacman emerges victorious! Score: 1917
+Pacman died! Score: 873
+Pacman emerges victorious! Score: 1702
 Pacman emerges victorious! Score: 1728
-Pacman emerges victorious! Score: 1535
-Pacman died! Score: -81
-Pacman emerges victorious! Score: 1936
-Pacman emerges victorious! Score: 1542
-Pacman emerges victorious! Score: 1725
-Pacman died! Score: 26
+Pacman emerges victorious! Score: 1903
+Pacman emerges victorious! Score: 1712
+Pacman emerges victorious! Score: 2109
+Pacman emerges victorious! Score: 2131
+Pacman emerges victorious! Score: 1927
+Pacman emerges victorious! Score: 2095
+Pacman emerges victorious! Score: 1525
+Pacman died! Score: 457
+Pacman emerges victorious! Score: 1922
+Pacman emerges victorious! Score: 1913
+Pacman emerges victorious! Score: 2135
+Pacman emerges victorious! Score: 1537
+Pacman emerges victorious! Score: 1724
+Pacman emerges victorious! Score: 1905
+Pacman emerges victorious! Score: 1510
+Pacman emerges victorious! Score: 1921
+Pacman emerges victorious! Score: 1930
+Pacman emerges victorious! Score: 1923
+Pacman emerges victorious! Score: 1344
+Pacman emerges victorious! Score: 1311
+Pacman emerges victorious! Score: 1709
+Pacman emerges victorious! Score: 1526
+Pacman died! Score: -66
+Pacman emerges victorious! Score: 1901
 Pacman emerges victorious! Score: 1524
-Pacman emerges victorious! Score: 1547
-Pacman died! Score: -324
-Pacman died! Score: -381
-Pacman emerges victorious! Score: 1720
-Pacman emerges victorious! Score: 1531
-Pacman emerges victorious! Score: 1529
-Pacman died! Score: -285
-Average Score: 1182.98
-Scores:        1538.0, 1532.0, 1539.0, 1934.0, 293.0, 455.0, 1713.0, 1740.0, 762.0, 525.0, 292.0, 1518.0, 1736.0, 459.0, 1942.0, -285.0, 1544.0, 1521.0, 1726.0, -30.0, 1536.0, 1912.0, 1533.0, 1481.0, 1342.0, 1914.0, 1525.0, 1743.0, 2134.0, 159.0, 1716.0, 1926.0, 1732.0, 104.0, 2112.0, 128.0, 1337.0, 1529.0, -220.0, 1020.0, -120.0, 1512.0, 1735.0, 1347.0, 1528.0, 1746.0, 1937.0, 637.0, 813.0, 1534.0, 1684.0, 1537.0, 1936.0, -340.0, 485.0, 519.0, 1536.0, 516.0, 1530.0, 1729.0, 1535.0, 1336.0, 1542.0, 1735.0, 1302.0, 1905.0, 506.0, 1721.0, 1726.0, 1741.0, 1535.0, 1546.0, 1545.0, -99.0, 1525.0, 2141.0, 1740.0, 1533.0, -360.0, 12.0, 1736.0, -217.0, 1718.0, 102.0, 602.0, 1728.0, 1535.0, -81.0, 1936.0, 1542.0, 1725.0, 26.0, 1524.0, 1547.0, -324.0, -381.0, 1720.0, 1531.0, 1529.0, -285.0
-Win Rate:      68/100 (0.68)
-Record:        Win, Win, Win, Win, Loss, Loss, Win, Win, Loss, Loss, Loss, Win, Win, Loss, Win, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Loss, Win, Loss, Win, Win, Loss, Loss, Loss, Win, Win, Win, Win, Win, Win, Loss, Loss, Win, Win, Win, Win, Loss, Loss, Loss, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Loss, Loss, Win, Loss, Win, Loss, Loss, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Loss, Loss, Win, Win, Win, Loss
+Pacman emerges victorious! Score: 1738
+Pacman died! Score: 905
+Average Score: 1535.64
+Scores:        1927.0, 1524.0, 1726.0, 1925.0, 1533.0, 1733.0, 1714.0, 1718.0, 128.0, 956.0, 1534.0, 1326.0, 1336.0, 1920.0, 1707.0, 1724.0, 1914.0, 1917.0, 1462.0, 1534.0, 1924.0, 1522.0, 1319.0, 807.0, 232.0, 1705.0, 1747.0, 1521.0, 862.0, 1501.0, 2113.0, 1740.0, 1534.0, 1905.0, 835.0, -66.0, 39.0, 1925.0, 1908.0, 1736.0, 1936.0, 1732.0, 1922.0, 1731.0, 1736.0, 1734.0, 1724.0, 2104.0, 1718.0, 1722.0, 1525.0, 1537.0, 834.0, 1736.0, 547.0, 553.0, 1527.0, 1744.0, 1916.0, -62.0, 1736.0, 1721.0, 1907.0, 436.0, 2114.0, 1734.0, 1932.0, 2101.0, 1509.0, 1917.0, 873.0, 1702.0, 1728.0, 1903.0, 1712.0, 2109.0, 2131.0, 1927.0, 2095.0, 1525.0, 457.0, 1922.0, 1913.0, 2135.0, 1537.0, 1724.0, 1905.0, 1510.0, 1921.0, 1930.0, 1923.0, 1344.0, 1311.0, 1709.0, 1526.0, -66.0, 1901.0, 1524.0, 1738.0, 905.0
+Win Rate:      83/100 (0.83)
+Record:        Win, Win, Win, Win, Win, Win, Win, Win, Loss, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Loss, Loss, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Loss, Loss, Win, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Loss
