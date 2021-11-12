@@ -247,83 +247,75 @@ class NewExtractor(FeatureExtractor):
         for g in ghost_states:
             # count the number of dangerous ghosts 1-step away
             if g.scaredTimer <= 1 and (next_x, next_y) in Actions.getLegalNeighbors(g.getPosition(), walls):
-                features["#-of-ghosts-1-step-away"] = 1.0
+                features["#-of-ghosts-1-step-away"] += 1.0
             # count the number of dangerous ghosts 2-step away
             elif g.scaredTimer <= 2 and (next_x, next_y) in self.getTwoStepNeighbors(g.getPosition(), walls):
-                features["#-of-ghosts-2-step-away"] = 1.0
+                features["#-of-ghosts-2-step-away"] += 1.0
             elif g.scaredTimer <= 3 and (next_x, next_y) in self.getThreeStepNeighbors(g.getPosition(), walls):
-                features["#-of-ghosts-3-step-away"] = 1.0
+                features["#-of-ghosts-3-step-away"] += 1.0
             # elif g.scaredTimer <= 4 and (next_x, next_y) in self.getFourStepNeighbors(g.getPosition(), walls):
             #     features["#-of-ghosts-4-step-away"] += 1.0
 
 
         # check if all ghosts are scared for at least 2-time-step
         all_ghosts_scared = all(ghost_state.scaredTimer >= 1 for ghost_state in ghost_states)
-        if all_ghosts_scared:
-            features["very-safe"] += 1.0
+            
 
         for g in ghost_states:
+            dist = self.getNearestGhost((next_x, next_y), g.getPosition(), walls)
+            if dist is not None:
+                # make the distance a number less than one otherwise the update
+                # will diverge wildly
+                features["min-dist-active-ghost"] = float(dist) / (walls.width * walls.height)
+                
+            if all_ghosts_scared:
+                features["very-safe"] = 1.0
+                dist = self.getNearestGhost((next_x, next_y), g.getPosition(), walls)
+                if dist is not None:
+                    # make the distance a number less than one otherwise the update
+                    # will diverge wildly
+                    features["min-dist-scared-ghost"] = float(dist) / (walls.width * walls.height)
+                
             # if scared ghost is in pacman's range, eat it
             if g.scaredTimer >= 1 and (next_x, next_y) in Actions.getLegalNeighbors(g.getPosition(), walls):
                 features["#-of-scared-ghosts-1-step-away"] = 1.0
-                features["fearless"] = 1.1
-                dist = self.getNearestGhost((next_x, next_y), g.getPosition(), walls)
-                if dist is not None:
-                    # make the distance a number less than one otherwise the update
-                    # will diverge wildly
-                    features["closest-ghost"] = float(dist) / (walls.width * walls.height)
+                features["fearless"] = 1.0
             # chase the scared ghost if the ghost is in pacman's range
             elif g.scaredTimer >= 2 and (next_x, next_y) in self.getTwoStepNeighbors(g.getPosition(), walls):
                 features["#-of-scared-ghosts-2-step-away"] = 1.0
-                features["fearless"] = 1.1
-                dist = self.getNearestGhost((next_x, next_y), g.getPosition(), walls)
-                if dist is not None:
-                    # make the distance a number less than one otherwise the update
-                    # will diverge wildly
-                    features["closest-ghost"] = float(dist) / (walls.width * walls.height)
-            # chase the scared ghost if the ghost is in pacman's range
-            elif g.scaredTimer >= 3 and (next_x, next_y) in self.getThreeStepNeighbors(g.getPosition(), walls):
-                features["#-of-scared-ghosts-3-step-away"] = 1.0
                 features["fearless"] = 1.0
-                dist = self.getNearestGhost((next_x, next_y), g.getPosition(), walls)
-                if dist is not None:
-                    # make the distance a number less than one otherwise the update
-                    # will diverge wildly
-                    features["closest-ghost"] = float(dist) / (walls.width * walls.height)
+            # chase the scared ghost if the ghost is in pacman's range
+            # elif g.scaredTimer >= 3 and (next_x, next_y) in self.getThreeStepNeighbors(g.getPosition(), walls):
+            #     features["#-of-scared-ghosts-3-step-away"] = 1.0
+            #     features["fearless"] = 1.0
             # elif g.scaredTimer >= 4 and (next_x, next_y) in self.getFourStepNeighbors(g.getPosition(), walls):
             #     features["#-of-scared-ghosts-4-step-away"] += 1.0
             #     features["fearless"] = 1.0
-            #     dist = self.getNearestGhost((next_x, next_y), g.getPosition(), walls)
-            #     if dist is not None:
-            #         # make the distance a number less than one otherwise the update
-            #         # will diverge wildly
-            #         features["closest-ghost"] = float(dist) / (walls.width * walls.height)
             else:
-                # pacman's distance to the closes capsule
-                capsule_dist = self.closestCapsule((next_x, next_y), state.getCapsules(), walls)
-                features["get-capsule"] = 1.2
-                if capsule_dist is not None:
-                    features["closest-capsule"] = float(capsule_dist) / (walls.width * walls.height)
+                features["get-capsule"] = 1
+        
+        
+        capsule_dist = self.closestCapsule((next_x, next_y), state.getCapsules(), walls)
+        if capsule_dist is not None:
+            features["min-dist-capsule"] = float(capsule_dist) / (walls.width * walls.height)
+                
 
         # if there is no danger of ghosts then add the food feature
         if ((not features["#-of-ghosts-1-step-away"] 
             or not features["#-of-ghosts-2-step-away"] 
-            or not features["#-of-ghosts-3-step-away"] 
             or all_ghosts_scared) and food[next_x][next_y] 
             and features["fearless"] != 0):
-            features["eats-food"] = 1.3
+            features["eats-food"] = 1.0
         
-        # if features["eats-food"] == 0 and len(state.getLegalActions(0)) >= 4:
-        #     # is pacman free to move?
-        #     features["free-to-move"] = len(state.getLegalActions(0))
+        if len(state.getLegalActions(0)) >= 4:
+            # is pacman free to move?
+            features["free-to-move"] = len(state.getLegalActions(0))
 
         dist = closestFood((next_x, next_y), food, walls)
         if dist is not None:
-            # make the distance a number less than one otherwise the update
-            # will diverge wildly
             features["closest-food"] = float(dist) / (walls.width * walls.height)
 
-        features.divideAll(9.0)
+        features.divideAll(5.0)
         return features
     
 
